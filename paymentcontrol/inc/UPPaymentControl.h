@@ -4,6 +4,7 @@
 //
 //  Created by qcao on 15/10/20.
 //  Copyright © 2015年 China Unionpay Co.,Ltd. All rights reserved.
+//  v3.4.7 build0(mini)
 //
 
 #import <Foundation/Foundation.h>
@@ -56,6 +57,11 @@ typedef void (^UPPaymentResultBlock)(NSString* code, NSDictionary* data);
  *  @param url              支付结果url，传入后由SDK解析
  *  @param completionBlock  结果回调，保证跳转钱包支付过程中，即使调用方app被系统kill时，能通过这个回调取到支付结果。
  */
+
+/// APP是否已安装检测接口，通过该接口得知用户是否安装银联支付的APP。
+/// @param mode 支付环境
+/// @param merchantID  商户编号
+- (BOOL)isPaymentAppInstalled:(NSString*)mode withMerchantID:(NSString *)merchantID;
 
 - (void)handlePaymentResult:(NSURL*)url completeBlock:(UPPaymentResultBlock)completionBlock;
 
