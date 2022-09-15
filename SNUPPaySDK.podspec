@@ -17,5 +17,5 @@ Pod::Spec.new do |s|
   s.frameworks = 'CFNetwork','SystemConfiguration','Security'
   s.libraries = 'z'
   s.source_files = 'paymentcontrol/inc/*.h'
-  s.vendored_libraries = 'paymentcontrol/libs/libPaymentControl.a'
+  s.vendored_libraries = 'paymentcontrol/libs/libPaymentControlMini.a'
 end
